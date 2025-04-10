@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabella | Desenvolvedora de Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --cor-primaria: #9a7baf;
+            --cor-secundaria: #f0e6f6;
+            --cor-texto: #4a4a4a;
+            --cor-destaque: #7d5a92;
+            --cor-fundo: #fff9fd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: var(--cor-fundo);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            /* Garante que a imagem aparecerá mesmo se o link estiver quebrado */
+            background-color: #f0e6f6;
+            background-image: url('https://i.imgur.com/D6dLSYQ.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: white;
+            color: var(--cor-primaria);
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--cor-destaque);
+            font-size: 2rem;
+            font-weight: 300;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--cor-secundaria);
+            margin: 15px auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-destaque);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            height: 200px;
+            background-color: var(--cor-secundaria);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-destaque);
+            font-size: 3rem;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--cor-destaque);
+        }
+        
+        .project-description {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .project-links a {
+            color: var(--cor-primaria);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .education-item {
+            margin-bottom: 30px;
+        }
+        
+        .education-title {
+            font-size: 1.2rem;
+            color: var(--cor-destaque);
+            margin-bottom: 5px;
+        }
+        
+        .education-period {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: var(--cor-destaque);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <!-- Imagem corrigida - usando link direto do Imgur -->
+            <img src="https://i.imgur.com/D6dLSYQ.png" alt="Isabella" class="profile-pic">
+            <h1>Isabella Castro</h1>
+            <p class="subtitle">Desenvolvedora de Software | Python, Java, Kotlin</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/isaa_developer?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <!-- Link do LinkedIn corrigido - adicionado https:// -->
+                <a href="https://www.linkedin.com/in/isabella-aparecida-2477b2217" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/isabellaguerra" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Olá! Eu sou a Isabella, uma desenvolvedora de software de 22 anos apaixonada por tecnologia e programação. Atualmente estou cursando Análise e Desenvolvimento de Sistemas e me especializando em desenvolvimento backend e mobile.</p>
+                    <p>Adoro resolver problemas complexos e transformar ideias em soluções tecnológicas eficientes. Meu objetivo é continuar aprendendo e me desenvolvendo como profissional, contribuindo para projetos inovadores.</p>
+                    
+                    <h3 style="margin-top: 20px; color: var(--cor-destaque); font-weight: 400;">Habilidades Técnicas</h3>
+                    <div class="skills">
+                        <span class="skill">Python</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">Kotlin</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">Desenvolvimento Android</span>
+                        <span class="skill">Algoritmos</span>
+                        <span class="skill">Estrutura de Dados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" style="background-color: var(--cor-secundaria);">
+        <div class="container">
+            <h2 class="section-title">Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sistema de Gerenciamento</h3>
+                        <p class="project-description">Sistema desenvolvido em Python para gerenciamento de tarefas com interface CLI e banco de dados SQLite.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">App de Notas</h3>
+                        <p class="project-description">Aplicativo de notas desenvolvido em Kotlin para Android com sincronização em nuvem e markdown support.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Jogo da Velha Online</h3>
+                        <p class="project-description">Jogo da velha multiplayer desenvolvido em Java com sockets para conexão em rede.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Formação</h2>
+            <div class="education-item">
+                <h3 class="education-title">Análise e Desenvolvimento de Sistemas</h3>
+                <p>Graduação tecnológica com foco em desenvolvimento de software, arquitetura de sistemas e gestão de projetos.</p>
+                <p>Cursos Complementares</p>
+                <ul>
+                    <li>Python (DIO & Udemy)</li>
+                    <li>Programação Orientada a Objetos (POO)</li>
+                    <li>Automação de tarefas e scripts</li>
+                    <li>Bibliotecas como Pandas, Flask e Django</li>
+                </ul>
+                <p>Desenvolvedora de Software (Autoestudo + Cursos Online)</p>
+                <ul>
+                    <li>Versionamento com Git/GitHub</li>
+                    <li>Noções de SQL e bancos de dados</li>
+                    <li>Metodologias Ágeis (Scrum/Kanban)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Isabella - Desenvolvedora de Software</p>
+            <p style="margin-top: 10px;">
+                <!-- Email corrigido - adicionado mailto: -->
+                <a href="mailto:isabellaaparecidaguerra@gmail.com" style="color: white; text-decoration: none;">isabellaaparecidaguerra@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
