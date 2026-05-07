@@ -1,0 +1,27 @@
+class Conversor {
+
+    public double converter(double celsius) {
+        return (celsius * 9/5) + 32;
+    }
+
+    public double converter(int km) {
+        return km * 0.621371;
+    }
+
+    public String converter(String texto) {
+        return texto.toUpperCase();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Conversor c = new Conversor();
+
+        System.out.println(c.converter(30.0));
+
+        System.out.println(c.converter(10));
+
+        System.out.println(c.converter("java"));
+    }
+}
