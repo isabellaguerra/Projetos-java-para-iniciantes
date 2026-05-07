@@ -1,0 +1,32 @@
+Perguntas
+Explique como a sobrescrita de métodos permite comportamentos diferentes para objetos
+da mesma hierarquia.
+
+A sobrecarga permite criar metodos com o mesmo nome,
+mas que trabalham com tipos diferents de dados.
+Assim métodos  converter () pode realizar várias funções diferentes dependendo do parâmetro recebido .
+s
+
+
+Descreva o mecanismo de sobrecarga de métodos e como ele difere da sobrescrita em
+termos de polimorfismo.
+
+A sobrecarga de métodos acontece quando uma classe possui vários métodos com o mesmo nome,
+mas com diferentes quantidades ou tipos de parâmetros. O Java identifica qual método deve ser
+executado de acordo com os argumentos passados na chamada.
+Já a sobrescrita ocorre quando uma classe filha redefine um método herdado da classe pai,
+alterando seu comportamento.
+Diferença em relação ao polimorfismo:
+A sobrecarga representa um polimorfismo em tempo de compilação, pois o compilador decide qual método será usado.
+A sobrescrita representa um polimorfismo em tempo de execução, pois o método executado depende do tipo real do objeto criado.
+
+
+Discuta como a sobrecarga de construtores facilita a criação de objetos com diferentes
+conjuntos de informações, permitindo flexibilidade na instânciação de objetos.
+
+A sobrecarga de construtores permite criar vários construtores na mesma classe com diferentes parâmetros.
+Isso facilita a criação de objetos com quantidades diferentes de informações, trazendo mais flexibilidade para a instanciação.
+
+
+
+
