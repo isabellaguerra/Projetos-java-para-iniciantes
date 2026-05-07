@@ -1,14 +1,13 @@
 Perguntas
-Explique como a sobrescrita de métodos permite comportamentos diferentes para objetos
+1 Explique como a sobrescrita de métodos permite comportamentos diferentes para objetos
 da mesma hierarquia.
 
 A sobrecarga permite criar metodos com o mesmo nome,
 mas que trabalham com tipos diferents de dados.
 Assim métodos  converter () pode realizar várias funções diferentes dependendo do parâmetro recebido .
-s
 
 
-Descreva o mecanismo de sobrecarga de métodos e como ele difere da sobrescrita em
+2 Descreva o mecanismo de sobrecarga de métodos e como ele difere da sobrescrita em
 termos de polimorfismo.
 
 A sobrecarga de métodos acontece quando uma classe possui vários métodos com o mesmo nome,
@@ -21,12 +20,21 @@ A sobrecarga representa um polimorfismo em tempo de compilação, pois o compila
 A sobrescrita representa um polimorfismo em tempo de execução, pois o método executado depende do tipo real do objeto criado.
 
 
-Discuta como a sobrecarga de construtores facilita a criação de objetos com diferentes
+3 Discuta como a sobrecarga de construtores facilita a criação de objetos com diferentes
 conjuntos de informações, permitindo flexibilidade na instânciação de objetos.
 
 A sobrecarga de construtores permite criar vários construtores na mesma classe com diferentes parâmetros.
 Isso facilita a criação de objetos com quantidades diferentes de informações, trazendo mais flexibilidade para a instanciação.
 
+4Como o polimorfismo por sobrescrita facilita a implementação de diferentes formas de
+pagamento dentro de um sistema sem alterar o código da classe base?
+
+O polimorfismo por sobrescrita permite que subclasses implementem comportamentos diferentes para o mesmo método da classe base.
+Assim, cada forma de pagamento pode possuir sua própria lógica sem modificar a classe principal.
 
 
 
+5 Explique como a sobrecarga de métodos permite implementar várias versões do método
+converter(), mesmo com diferentes tipos de dados e funcionalidades.
+A sobrecarga de métodos permite criar várias versões de um mesmo método com o mesmo nome,
+mas com parâmetros diferentes. Assim, o método converter() pode executar funções diferentes dependendo do tipo de dado recebido.
