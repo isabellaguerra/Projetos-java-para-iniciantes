@@ -1,0 +1,27 @@
+package objetos;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   Scanner leitor = new Scanner (System.in);
+   
+ 
+   System.out.println("digite a temperatura");
+   int temperatura  = leitor.nextInt();
+   if (temperatura <= 15) {
+	   System.out.println("baixa");
+   }
+   else if (temperatura <=25)  {
+	   System.out.println("agradavel");
+   }
+ 
+   else {
+	System.out.println  ("calor");
+	}
+	   
+   
+   leitor.close();
+	}
+	
+}
