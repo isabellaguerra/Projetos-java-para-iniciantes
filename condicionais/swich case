@@ -1,0 +1,28 @@
+package objetos;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("digite um numero de 1 a 6");
+        int dia= entrada.nextInt();
+    	
+    	String nomeDia;
+        
+    	switch (dia) {
+    	    case 1: nomeDia = "Domingo"; break;
+    	    case 2: nomeDia = "Segunda"; break;
+    	    case 3: nomeDia = "Terça"; break;
+    	    case 4: nomeDia = "Quarta"; break;
+    	    case 5: nomeDia = "Quinta"; break;
+    	    case 6: nomeDia = "Sexta"; break;
+    	    default: nomeDia = "Dia inválido"; break;
+    	}
+    	System.out.println(nomeDia);
+    	 entrada.close();
+    }
+  }
+
+	
