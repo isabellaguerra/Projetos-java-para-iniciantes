@@ -1,0 +1,25 @@
+System.out.println("1 - Consultar saldo");
+System.out.println("2 - Depositar");
+System.out.println("3 - Sacar");
+System.out.println("4 - Sair");
+
+switch (opcao) {
+    case 1:
+        System.out.println("Seu saldo é R$ 500,00");
+        break;
+
+    case 2:
+        System.out.println("Depósito realizado.");
+        break;
+
+    case 3:
+        System.out.println("Saque realizado.");
+        break;
+
+    case 4:
+        System.out.println("Programa encerrado.");
+        break;
+
+    default:
+        System.out.println("Opção inválida.");
+}
