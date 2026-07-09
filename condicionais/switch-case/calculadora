@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static Double realizarCalculo(Double vlum, Double vldo, String operacao) {
+        Double resultCalculo = 0.0;
+
+        switch (operacao) {
+            case "+":
+                resultCalculo = vlum + vldo;
+                break;
+
+            case "-":
+                resultCalculo = vlum - vldo;
+                break;
+
+            case "*":
+                resultCalculo = vlum * vldo;
+                break;
+
+            case "/":
+                if (vldo != 0) {
+                    resultCalculo = vlum / vldo;
+                } else {
+                    System.out.println("Erro: divisão por zero.");
+                    return null;
+                }
+                break;
+
+            default:
+                System.out.println("Operação inválida.");
+                return null;
+        }
+
+        return resultCalculo;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        Double vlum;
+        Double vldo;
+        String operacao;
+
+        System.out.println("Digite o primeiro número:");
+        vlum = scanner.nextDouble();
+
+        System.out.println("Digite a operação (+, -, *, /):");
+        operacao = scanner.next();
+
+        System.out.println("Digite o segundo número:");
+        vldo = scanner.nextDouble();
+
+        Double respostaCalculo = realizarCalculo(vlum, vldo, operacao);
+
+        if (respostaCalculo != null) {
+            System.out.println("Resultado: " + respostaCalculo);
+        }
+
+        scanner.close();
+    }
+}
