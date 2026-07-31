@@ -1,0 +1,23 @@
+ public class Main
+{
+	public static void main(String[] args) {
+	
+	    int valor= 100;
+	  
+	    
+	    boolean epar = epar(valor);
+	    
+	     System.out.println(epar);
+	     
+	}
+	    
+	    
+		public static boolean epar (int valor){
+		    if (valor % 2 == 0)
+		{return true;}
+		else { return false;
+			}
+			
+			
+		}
+	}
