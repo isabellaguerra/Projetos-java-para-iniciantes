@@ -1,0 +1,18 @@
+ public class triplo
+{
+	public static void main(String[] args) {
+	
+	    int valor= 9;
+	  
+	    
+	    int triplo = triplo(valor);
+	    
+	     System.out.println(triplo);
+	     
+	}
+	    
+	    
+		public static int triplo (int valor){
+		return valor * 3;
+	}
+}
