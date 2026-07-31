@@ -1,0 +1,20 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        double preco = 1.00;
+        int quantidade = 2;
+
+        double total = calcularTotal( preco,  quantidade);
+
+        System.out.println(total);
+
+    }
+
+    public static double calcularTotal(double preco, int quantidade) {
+
+       return quantidade * preco; 
+
+    }
+
+}
